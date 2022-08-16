@@ -1,5 +1,6 @@
 import json
 
+# Load morse code alphabet
 f = open('./morse-code.json')
 morse_file = json.load(f)
 
@@ -8,12 +9,11 @@ print('\nLetters are separated by spaces and words by "/". If a letter cannot be
 machine_is_on = True
 
 while machine_is_on:
-
     
     user_input = input('\nType the text you want to convert into morse code: ').lower()
-
     text_in_morse = ''
 
+    # Translate user input into morse code
     for letter in user_input:
         try: 
             text_in_morse += morse_file[letter] + ' '
@@ -26,5 +26,3 @@ while machine_is_on:
 
     if want_to_continue != 'yes':
         machine_is_on = False
-
-
