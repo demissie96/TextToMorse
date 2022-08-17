@@ -11,7 +11,7 @@ ConsoleClear()
 logo = Logo()
 logo.print_logo()
 
-print('\nLetters are separated by spaces and words by "/". If a letter cannot be translated a "#" will appear in the output.')
+print('\nLetters are separated by spaces and words by "/".\nIf a letter cannot be translated a "#" will appear in the output.')
 
 machine_is_on = True
 
