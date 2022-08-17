@@ -1,8 +1,15 @@
 import json
+from ascii_art import Logo
+from console_clear import ConsoleClear
 
 # Load morse code alphabet
-f = open('./morse-code.json')
+f = open('./morse_code.json')
 morse_file = json.load(f)
+
+ConsoleClear()
+
+logo = Logo()
+logo.print_logo()
 
 print('\nLetters are separated by spaces and words by "/". If a letter cannot be translated a "#" will appear in the output.')
 
@@ -26,3 +33,8 @@ while machine_is_on:
 
     if want_to_continue != 'yes':
         machine_is_on = False
+        ConsoleClear()
+        logo.print_bye()
+    else:
+        ConsoleClear()
+        logo.print_logo()
